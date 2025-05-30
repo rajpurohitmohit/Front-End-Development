@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Follow Button</title>
+    <style>
+        button{
+            font-family: 'Poppins';
+            padding: 5px 10px;
+            margin: 200px;
+            background-color: rgb(82, 172, 208);
+            border-radius: 10px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            height: 50px;
+            width: 100px;
+        }
+        button:hover{
+            
+            background-color: skyblue;
+        }
+    </style>
+
+</head>
+<body>
+    <button onclick="change()">Follow</button>
+
+    <script>
+        function change(){
+
+            let btn = document.querySelector("button")
+            
+            if (btn.innerHTML === "Follow"){
+                btn.innerHTML = 'Following';
+            }
+            else{
+                btn.innerHTML = 'Follow';
+            }
+
+        }
+
+
+
+    </script>
+</body>
+</html>

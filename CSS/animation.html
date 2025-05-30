@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+
+    <style>
+        .container{
+            width: 50vw;
+            height: 50vh;
+            background-color: black;
+            display: flex;
+            align-items: flex-end;
+        }
+        .circle{
+            width: 150px;
+            height: 150px;
+            background-color: aquamarine;
+            border-radius: 75px;
+            animation: xaxis 3s linear infinite, yaxis 1s ease-out infinite alternate;
+            position: absolute;
+        }
+
+        @keyframes xaxis {
+            from{
+                left: 0%;
+            }
+            to{
+                left: 100%;
+            }
+        }
+        @keyframes yaxis {
+            from{
+                bottom: 0%;
+            }
+            to{
+                bottom: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle">
+
+        </div>
+    </div>
+</body>
+</html>

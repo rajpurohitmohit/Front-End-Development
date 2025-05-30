@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Number guessing Game
+
+      let random = Math.ceil(Math.random() * 10);
+      let scores = 0 || Number(localStorage.getItem('scores'))
+      // let userinput =
+      
+      console.log(
+          `This is a number Guessing Game. Guess a number`
+        );
+        console.log(`You have got 5 chances for guessing the number`);
+        
+        for (let i = 0; i < 5; i++) {
+          let userinput = prompt("Enter a random number between 1 - 10");
+        if (random == userinput) {
+          console.log(`You Guessed it correct. The number was ${random}`);
+          scores+=1;
+          break;
+        } else if (random < userinput) {
+          console.log(`The number is smaller`);
+        } else if (random > userinput) {
+          console.log(`The number is larger`);
+        }
+      }
+
+      localStorage.setItem('scores', scores);
+      localStorage.getItem('scores');
+    </script>
+  </body>
+</html>

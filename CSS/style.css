@@ -1,0 +1,335 @@
+/* EXTERNAL CSS */
+
+/* ELEMENT SELECTOR */
+div {
+  /* background-color: red; */
+}
+
+/* CLASS SELECTOR  */
+.red {
+  background-color: red;
+}
+
+/* ID SELECTOR */
+#green {
+  background-color: green;
+}
+
+/* CHILD SELECTOR  */
+div > p {
+  color: blue;
+  background-color: brown;
+}
+
+/* DESCENDANT SELECTOR  */
+div p {
+  color: blue;
+  background-color: brown;
+}
+
+/* UNIVARSAL SELECTOR */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* PSEUDO SELECTORS */
+
+/* After clicking the link */
+a:visited {
+  color: yellow;
+}
+
+/* The Color of the link before visiting */
+a:link {
+  color: green;
+}
+
+/* When Clicking on the link */
+a:active {
+  background-color: red;
+}
+
+/* When Hovering on the link */
+a:hover {
+  background-color: yellow;
+}
+
+/* Child */
+p:first-child {
+  background-color: aqua;
+}
+p:last-child{
+  background-color: yellow;
+}
+p:nth-child(2){
+  background-color: aquamarine;
+}
+
+/* BOX MODEL */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  background-color: aqua;
+}
+.box1 {
+  color: yellow;
+  padding: 10px;
+  margin: 35px;
+  border: 2px solid blue;
+  height: 200px;
+  box-sizing: border-box;
+}
+.box2 {
+  color: red;
+  padding: 10px;
+  margin: 25px;
+  border: 2px solid black;
+  height: 200px;
+  box-sizing: border-box;
+}
+
+/* TEXT */
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins:wght@300&display=swap");
+h1 {
+  font-family: "Poppins", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+p {
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-size: 20px;
+  /* font-style:italic;
+            font-weight: 500;  */
+}
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: blue;
+  /* text-decoration-style: dotted; */
+  text-decoration-thickness: 7px;
+  /* text-indent: 45px; */
+}
+.lorem {
+  border: 2px solid red;
+  width: 145px;
+  word-break: break-all;
+  /* text-overflow: ellipsis;
+            overflow: hidden; */
+}
+
+/* COLORS */
+/* https://codepen.io/web-dot-dev/pen/ZELGraM */
+ h1 {
+    /* color:darkred; */
+    /* color: #0BEE0B; */
+    /* color: rgb(76, 125, 59); */
+    /* color: rgba(255, 22, 5, 0.175) */
+    color: hsl(130, 61%, 44%);
+    background-color: rgb(76, 125, 59);
+}
+
+/* CSS SPECIFICITY */
+/* The specificity of this selector is 1  */
+h1 {
+    color: aqua;
+}
+
+/* The specificity of this selector is 10  */
+.cpurple {
+    color: purple;
+}
+
+/* The specificity of this selector is 1 + 10 = 11  */
+h1.yellow {
+    color: yellow;
+}
+
+/* This is an example of attribute selector. The specificity of this selector is 10 */
+[data-x=a] {
+    color: maroon;
+}
+
+/* The specificity of this selector is 10  */
+.cred {
+    color: red;
+}
+
+/* The specificity of this selector is 1 + 10 + 10 + 10 + 10 = 41  */
+a.harryclass.rohan-class[href]:hover {
+    color: blueviolet;
+}
+
+/* CSS SIZING UNITS */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 12px;
+}
+
+.box {
+    box-sizing: border-box;
+    border: 2px solid black;
+    /* width: 2048px; */
+    width: 80vw;
+    height: 10vh;
+    margin: auto;
+    background-color: aquamarine;
+}
+
+.container {
+    box-sizing: border-box;
+    border: 2px solid black;
+    /* width: 2048px; */
+    width: 80vw;
+    /* height: 80vh; */
+    min-height: 80vh;
+    margin: 23px auto;
+    font-size: 18px;
+    background-color: aquamarine;
+}
+.container > div{
+    font-size: 2em; 
+    border: 2px solid red;
+    width: 50%;
+}
+
+.container > div > div{
+    border: 2px solid blue;
+    width: 50%;
+}
+
+.mycont{ 
+    border: 2px solid black;
+    box-sizing: border-box;
+    margin: 23px auto;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    /* width: 100vmin; */
+    width: 80vw;
+}
+
+
+/* DISPLAY PROPERTIES */
+*{
+  margin: 0;
+  padding: 0;
+}
+.box {
+  border: 2px solid blue;
+  display: inline-block;
+  width: 344px;
+  padding:45px;
+  margin: 34px; 
+}
+
+.box1{
+  /* display: none; */
+  /* visibility: hidden; */
+}
+
+/* SHADOWS AND OUTLINES */
+.box{
+  border: 2px solid black;
+  padding:34px;
+  box-shadow:  5px 15px 5px #70a711;
+}
+.text-element { 
+  text-shadow: 10px 5px 3px #e695f7 
+}
+
+
+/* STYLING LIST USING CSS */
+nav ul li{
+  list-style: devanagari;
+  list-style-type: "🔥";
+  /* background-color: yellow; */
+  /* list-style-position: inside; */
+  border: 2px solid black;
+  /* list-style: disc inside url("https://user-images.githubusercontent.com/14011726/94132137-7d4fc100-fe7c-11ea-8512-69f90cb65e48.gif"); */
+  /* list-style-image: url("https://user-images.githubusercontent.com/14011726/94132137-7d4fc100-fe7c-11ea-8512-69f90cb65e48.gif"); */
+}
+
+/* CSS OVERFLOW PROPERTY */
+.box {
+  width: 30vw;
+  height: 30vh;
+  border: 2px solid black;
+  /* overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll; */
+  overflow: auto hidden;
+  /* white-space: nowrap;
+  text-overflow: ellipsis; */
+}
+
+
+/* CSS POSITION PROPERTY */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  height: 433px;
+  padding: 3px;
+  margin: 3px;
+  border: 2px solid black;
+}
+
+.box1 {
+  background-color: aqua;
+  /* position: sticky;
+  top:0px;
+  height: 111px;
+  width:100%;
+  margin: 0;
+  padding: 0; */
+  position: absolute;
+  top: 0px;
+  left:3px;
+}
+
+.box2 {
+  background-color: azure;
+  /* position: relative;
+  top: 34px;
+  left: 56px; */
+}
+
+.box3 {
+  background-color: antiquewhite;
+  /* position: fixed;
+  bottom: 0px;
+  left:8vw;
+  height: 111px; */
+}
+
+.box4 {
+  background-color: purple;
+}
+
+
+
+.parent {
+  padding: 43px;
+  margin: 34px;
+  border: 3px solid purple;
+  /* position: relative; */
+
+
+  /* Exception: transform, filter, or perspective properties can also make an element appear as positioned */
+  /* transform: translate(0); */
+  /* filter: invert(0); */
+  /* perspective: 0em; */
+}
+
+/* CSS VARIABLES */
