@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple To-Do List</title>
+  <style>
+    body {
+      background: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+      margin: 0;
+    }
+    .todo-container {
+      background: #fff;
+      margin-top: 60px;
+      padding: 30px 25px 20px 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      width: 350px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .input-section {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+    .input-section input[type="text"] {
+      flex: 1;
+      padding: 10px 12px;
+      font-size: 16px;
+      border: 2px solid #e1e1e1;
+      border-radius: 6px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .input-section input[type="text"]:focus {
+      border-color: #667eea;
+    }
+    .input-section button {
+      background: #667eea;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .input-section button:hover {
+      background: #764ba2;
+    }
+    ul.todo-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    ul.todo-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      color: #444;
+      font-size: 16px;
+    }
+    ul.todo-list li:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="todo-container">
+    <h2>My To-Do List</h2>
+    <div class="input-section">
+      <input type="text" placeholder="Add a new task..." class="hello">
+      <button onclick="hello()" >Add Item</button>
+    </div>
+    <ul class="todo-list">
+      <li>Sample Task 1</li>
+      <li>Sample Task 2</li>
+      <li>Sample Task 3</li>
+    </ul>   
+  </div>
+
+  <script>
+      let list = []
+      console.log(list)
+    function hello(){
+        
+        let input = document.querySelector(".hello");
+        let values = input.value;
+        
+        list.push(values)
+        console.log(list)
+        input.value = ''
+        
+    }
+  </script>
+</body>
+</html>
